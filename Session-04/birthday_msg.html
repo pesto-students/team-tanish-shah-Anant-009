@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Birthday Message</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Birthday Message Form</h1>
+    <form action="send_message.php" method="post">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+        required
+      />
+
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="color">Message Color:</label>
+      <input type="color" id="color" name="color" />
+
+      <label for="blink">Number of Blinks (0-10):</label>
+      <input type="number" id="blink" name="blink" min="0" max="10" value="0" />
+
+      <label for="volume">Music Volume (0-50):</label>
+      <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="50"
+        value="20"
+      />
+
+      <input type="submit" value="Send Birthday Message" />
+    </form>
+  </body>
+</html>
